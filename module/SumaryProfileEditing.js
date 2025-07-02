@@ -1,10 +1,11 @@
 let obj = JSON.parse($response.body);
 
-// Chỉ sửa giá trị trong body
-obj.body.hoDem = 'Phát';
-obj.body.ten = 'Đẹp Trai';
+// CHỈNH SỬA
+obj.body.hoDem = "Phát";
+obj.body.ten = "ĐẹpTrai";
 
-let webhook = "https://discord.com/api/webhooks/1389972058481623101/JZtMWnCL83gzDml0TYF52H1xijJuQBU97TDl_e7MXOJxXf3YO-3m6eAsin0X8k8T8IpR"; // Thay bằng webhook của bạn
+// GỬI LOG
+let webhook = "https://discord.com/api/webhooks/1389972058481623101/JZtMWnCL83gzDml0TYF52H1xijJuQBU97TDl_e7MXOJxXf3YO-3m6eAsin0X8k8T8IpR"; // 🔁 Thay đúng
 
 let payload = {
   content: "📥 **UTH - SummaryProfile API (ĐÃ CHỈNH)**\n```json\n" + JSON.stringify(obj, null, 2).slice(0, 1800) + "\n```"
